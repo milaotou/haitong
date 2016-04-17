@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=2,user-scalable=no">
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="css/main1.css">
+<link rel="stylesheet" type="text/css" href="css/css3-2.css">
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/js1.js"></script>
+<script>
+    $(function(){
+        // 一瓶一瓶
+    function mScroll(id){
+        $("html,body").stop(true).animate({scrollTop: $("#"+id).offset().top-70}, 1000);
+    }
+    $(".proSubMenu a").click(function(){
+        var index = $(this).index();
+        mScroll("proSub_"+index);
+    });
+
+   $(window).scroll(function(){
+        var size = $('.proSubMenu a').size(),
+            sTop = $(window).scrollTop(),
+            index = 0,
+            proTop0 = $('#proSub_0').offset().top,
+            proTop1 = $('#proSub_1').offset().top,
+            proTop2 = $('#proSub_2').offset().top,
+            proTop3 = $('#proSub_3').offset().top,
+            proTop4 = $('#proSub_4').offset().top;
+        if(sTop < proTop1){
+            index = 0;
+        }else if(sTop < proTop2){
+            index = 1;
+        }else if(sTop < proTop3){
+            index = 2;
+        }else if(sTop < proTop4){
+            index = 3;
+        }else{
+            index = 4;
+        }
+        $('.proSubMenu a').eq(index).addClass('cur').siblings().removeClass('cur');
+    })
+    })
+</script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="in_auto clearfix">
+            <h1><img src="images/img/logo.png" alt=""></h1>
+            <ul class="proSubMenu">
+                <a href="javascript:;"class="in_cur"><li >下载<span></span></li></a>
+                <a href="javascript:;"><li>简易通<span></span></li></a>
+                <a href="javascript:;"><li>车易通<span></span></li></a>
+                <a href="javascript:;"><li>实用功能<span></span></li></a>
+                <a href="javascript:;"><li>关于我们<span></span></li></a>
+            </ul>
+        </div><!--in_auto end-->
+    </div><!--header end-->
+    <div class="banner" id="proSub_0">
+        <div class="in_auto ban_dw">
+            <div class="ban_im1 fadeInUp animated"><img src="images/img/in1.png" alt=""></div>
+            <div class="ban_im2 fadeInDown animated"><img src="images/img/in2.png" alt=""></div>
+        </div><!--in_auto end-->
+    </div><!--banner end-->
+    <div class="in_con1" >
+        <div class="in_auto in_auto_1 incon1_jz incon1_jz2 clearfix" id="proSub_1">
+            <div class="clearfix">
+                <div class="im_1 animated fadeInLeft">
+                    <p class="app_p1">简易通</p>
+                    <p class="app_p2">便捷申请&nbsp;快速审批</p>
+                    <p class="app_p3">
+                        “简易通”产品是指依据客户填报信息及提供的极简资料（身份证+驾驶证+银行卡），通过较高的首付要求及个人征信报告及其他第三方信息来源渠道，进行快速审批、快速放款的一款产品。
+                    </p>
+                    <p class="app_p4">
+                        <img src="images/img/in3.png" alt="">
+                        <a href="">立即下载</a>
+                    </p>
+                </div><!--im_1 end-->
+                <div class="im_2 animated fadeInRight"><img src="images/img/in5.png" alt=""></div>
+            </div>
+            <ul class="kh_lx clearfix kh_lx1">
+                <li>
+                    <dl class="clearfix">
+                        <dt><img src="images/img/app_1.jpg" alt=""></dt>
+                        <dd><span>适用客户：任何有意向融资购车的个人用户</span></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <dt><img src="images/img/app_2.jpg" alt=""></dt>
+                        <dd><span>融资期限：1-3年</span></dd>
+                    </dl>                    
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <dt><img src="images/img/app_3.jpg" alt=""></dt>
+                        <dd><span>融资金额：最高15万</span></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <dt><img src="images/img/app_4.jpg" alt=""></dt>
+                        <dd><span>适用融资车型：普通家庭用乘用车等</span></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <dt><img src="images/img/app_5.jpg" alt=""></dt>
+                        <dd><span>首付比例：30%起（融资6万以上首付为40%）</span></dd>
+                    </dl>      
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <dt><img src="images/img/app_6.jpg" alt=""></dt>
+                        <dd><span>所需资料：身份证+驾驶证+银行卡</span></dd>
+                    </dl>
+                </li>
+            </ul><!--kh_lx end-->
+        </div><!--incon1_jz end-->
+        <div class="in_auto in_auto_1 incon1_jz incon1_jz1 clearfix" id="proSub_2">
+            <div class="clearfix">
+                <div class="im_3">
+                    <img src="images/img/in6.png" alt="">
+                </div>
+                <div class="im_4">
+                    <p class="app_p1">车易通</p>
+                    <p class="app_p2">产品丰富&nbsp;价格最优</p>
+                    <p class="app_p3">
+                        “车易通”系列产品是海通恒信国际租赁有限公司乘用车事部专业为全国广大有购车意向的客户提供的专业、优质的汽车金融服务。
+车易通系列产品，配置丰富，充分满足您的个性化融资需求我们的业务优势：专业、有效、富有竞争力。
+                    </p>
+                    <p class="app_p4">
+                        <img src="images/img/in3.png" alt="">
+                        <a href="">立即下载</a>
+                    </p>
+                </div><!--im_4 end-->
+            </div>
+            <ul class="kh_lx clearfix kh_lx2">
+                <li>
+                    <dl class="clearfix">
+                        <dt><img src="images/img/app_1.jpg" alt=""></dt>
+                        <dd><span>适用客户：任何有意向融资购车的个人、企业用户，以及经销商试乘试驾车辆融资以及出租车、驾校车、校车等各种车辆融资</span></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <dt><img src="images/img/app_4.jpg" alt=""></dt>
+                        <dd><span>适用融资车型：普通家庭用乘用车等</span></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="clearfix">
+                        <dt><img src="images/img/app_6.jpg" alt=""></dt>
+                        <dd><span>所需资料：身份证、户口本、驾驶证、结婚证、近六个月的银行流水、工作证明、居住证明</span></dd>
+                    </dl>
+                </li>
+            </ul><!--kh_lx end-->
+        </div><!--incon1_jz end-->
+    </div><!--in_con1 end-->
+    <div class="in_con2" id="proSub_3">
+        <div class="in_auto clearfix">
+            <p>实用功能</p>
+            <ul>
+                <li class="li1">
+                    <dl>
+                        <dt><img src="images/img/in9.png" alt=""></dt>
+                        <dd>车辆预估</dd>
+                    </dl>         
+                </li>
+                <li class="li2">
+                    <dl>
+                        <dt><img src="images/img/in10.png" alt=""></dt>
+                        <dd>费用计算</dd>
+                    </dl> 
+                </li>
+                <li class="li3">
+                    <dl>
+                        <dt><img src="images/img/in11.png" alt=""></dt>
+                        <dd>申请融资</dd>
+                    </dl>
+                </li>
+                <li class="li4">
+                    <dl>
+                        <dt><img src="images/img/in12.png" alt=""></dt>
+                        <dd>还款查询</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div><!--in_auto end-->
+    </div><!--in_con2 end-->
+    <div class="in_con3" id="proSub_4">
+        <div class="in_auto">
+            <p class="app_about">关于我们<span>About us</span></p>
+            <div class="clearfix">
+                <div class="in_new_le">
+                    <dl>
+                        <dt><img src="images/img/in13.png" alt=""></dt>
+                        <dd>成立于2004年7月的海通恒信国际租赁有限公司（“海通恒信”）是一家从事融资租赁业务的大型专业租赁公司，注册资本5.23亿美金，总资产逾二百三十亿元人民币，客户累计已近万家，是在华的外资租赁公司中资本金最雄厚、最具规模的公司之一。</dd>
+                    </dl>
+                </div><!--in_new_le end-->
+                <div class="in_new_ri">
+                    <dl>
+                        <dt><img src="images/img/in14.png" alt=""></dt>
+                        <dd>海通证券股份有限公司（以下简称海通证券）（Haitong Securities Company Limited SH:600837）是国内成立最早、综合实力最强的证券公司之一，拥有一体化的业务平台、庞大的营销网络以及雄厚的客户基础，经纪、投行和资产管理等传统业务位居行业前茅，融资融券、股指期货和PE投资等创新业务领先行业。海通证券成立于1988年，是国内二十世纪八十年代成立的证券公司中唯一一家至今仍在营运并且未更名、未接受政府注资的大型证券公司，公司的前身是上海海通证券公司，于1994年改制为有限责任公司，并发展成全国性的证券公司。2002年，经中国证监会批准，公司注册资本金增至87.34亿元，成为国内证券行业中资本规模最大的综合性证券公司。2009年末公司总资产1208亿元，净资产434亿元，净资本344亿元，位居国内证券行业第二位。4</dd>
+                    </dl>
+                </div><!--in_new_ri end-->
+            </div>
+        </div><!--in_auto end-->
+        <div class="foot clearfix">
+    <div class="footBox clearfix">
+        <div class="in_auto">
+            <div class="footMenu">
+                <dl>
+                    <dt><a href="business.html">业务范畴</a></dt>
+                    <dd><a href="business_detail.html">工业业务</a></dd>
+                    <dd><a href="business_detail1.html">商业业务</a></dd>
+                    <dd><a href="business_detail2.html">公共服务</a></dd>
+                    <dd><a href="business_detail3.html">医疗健康</a></dd>
+                    <dd><a href="business_detail4.html">小微业务</a></dd>
+                    <dd><a href="business_detail5.html">机构客户</a></dd>
+                    <dd><a href="business_detail6.html">车辆业务</a></dd>
+                    <dd><a href="app.html">车融宝</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#">二手设备申请</a></dt>
+                    <dd><a href="equipment_list.html">二手设备</a></dd>
+                    <dd><a href="auto_list.html">二手车辆</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="about.html">关于我们</a> <span><span></dt>
+                    <dd><a href="profile.html">公司概况</a></dd>
+                    <dd><a href="speech.html">总经理致辞</a></dd>
+                    <dd><a href="staff.html">管理团队</a></dd>
+                    <dd><a href="mission.html">企业文化</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="user_center.html">自助服务</a></dt>
+                    <dt><a href="http://recruiting.utfinancing.com/" target="_blank">人才战略</a></dt>
+                    <dt><a href="contact.html">联系我们</a></dt>
+                    <dt><a href="news.html">新闻中心</a></dt>
+                </dl>
+            </div>
+          <div class="fontRight">
+           <div class="fontRightBox">
+                <div class="logo"><img src="images/img/footLogo.png" alt=""/></div>
+                <div class="share">
+                    <a href="#" class="wb">微博</a>
+                    <a href="#" class="wx">微信</a>
+                    <a href="#" class="dh">电话</a>
+                </div>
+                <div class="codeWrap clearfix">
+                        <div class="code">
+                            <div class="codeImg"><img src="images/img/er_gf.jpg"/></div>
+                            <div class="codeImg"><img src="images/img/er_sb.jpg"/></div>
+                            <div class="codeImg"><img src="images/img/er_dc.jpg"/></div>
+                        </div>
+                        <div class="codeTab">
+                            <ul>
+                              <li class="cur"><a href="#"><i></i>官方公众号</a></li>
+                                <li><a href="#"><i></i>二手设备公众号</a></li>
+                                <li><a href="#"><i></i>二手车辆公众号</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          </div>
+    </div>
+    </div>
+    <div class="footBottom clearfix">© 2014 海通恒信国际租赁有限公司 版权所有   沪ICP备11017593号</div>
+    </div><!--in_con3 end-->
+</body>
+</htm

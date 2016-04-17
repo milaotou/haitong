@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;">
+	<meta name="format-detection" content="telephone=no;email=no;">
+	<meta name="apple-mobile-web-app-capable" content="yes"><!-- home screen app 全屏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- 状态栏 -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.css">
+	<title>海通恒信国际租赁有限公司</title>
+</head>
+
+<body>
+<div class="outbox">
+<!--头部-->
+<header class="d-box header">
+    <span class="logo ta_avC"><img src="images/logo.png" alt=""/></span>
+	<div class="loginbutton login">
+		<a href="javascript:;" class="ta_avC" id="login">
+			<i></i>
+			<span>登陆</span>
+		</a>
+	</div>
+</header>
+<!--end 头部-->
+
+<!--中间内容-->
+<section class="Wrapper">
+	<!--content start-->
+	<div class="content">
+		<!--banner start-->
+		<div class="imgShow mt_10 mb_10 p_r">
+			 <div class="swiperDetail">
+				 <div class="swiper-wrapper">
+					 <div class="swiper-slide"><img src="images/carimg.jpg" width="100%"></div>
+					 <div class="swiper-slide"><img src="images/carimg.jpg" width="100%"></div>
+					 <div class="swiper-slide"><img src="images/carimg.jpg" width="100%"></div>
+				 </div>
+				 <div class="swiper-pagination p_s " style="bottom:-0.5rem; display: block;"></div>
+			 </div>
+             <span class="imgshowPrev"></span>
+             <span class="imgshowNext"></span>
+		</div>
+		<!--banner end-->
+
+		<div class="carDetal">
+			 <h2 class="carName">大众 CC 2015款 1.8T 自动 豪华型</h2>
+			 <div class="carPrice">
+				 <span>价格: <em class="priceNum">￥22万</em> </span> <span>咨询人数：<em class="peopleNum">8人</em> </span>
+			 </div>
+			 <ul class="detailList">
+				 <li>品牌：<span>大众</span></li>
+				 <li>车型：<span>cc</span></li>
+			 </ul>
+			<ul class="detailList">
+				<li>设备存放地： <span>湖南.长沙</span></li>
+				<li>生产年份： <span>2009</span></li>
+				<li>新旧程度： <span>七成新</span></li>
+			</ul>
+			<ul class="detailList noborder">
+				<li>品质承诺：<span><i class="icon-rz"></i> 品牌认证</span><span><i class="icon-bz"></i>商家保证</span><span><i class="icon-zb"></i>原厂质保</span></li>
+				<li>售后承诺：<span class="border-cn p_r">保修三个月</span> </li>
+			</ul>
+		</div>
+		<div class="searchbox">
+			<input type="button" class="button-search" value="立即申请">
+		</div>
+	</div>
+	<!--content end-->
+</section>
+
+</div>
+<!--footMenu start-->
+<footer class="footMenu">
+	<ul class="d-box">
+		<li class="b-flex" id="openMenu"><a href="javascript:;"><i class="icon icon-menu"></i> <span>导航</span></a>
+			<span class="close" id="closeMenu"></span>
+		</li>
+		<li class="b-flex"><a href="used.html"><i class="icon icon-used"></i> <span>二手专区</span></a> </li>
+		<li class="b-flex"><a href="#"><i class="icon icon-costom"></i> <span>在线客服</span></a> </li>
+		<li class="b-flex"><a href="service.html"><i class="icon icon-service"></i> <span>自助服务</span></a> </li>
+	</ul>
+</footer>
+<!--footMenu end-->
+
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/swipe.js"></script>
+<script src="js/common.js"></script>
+<script>
+	var swiper = new Swiper('.swiperDetail', {
+		pagination: '.swiper-pagination',
+		paginationClickable: '.swiper-pagination',
+		nextButton: '.imgshowNext',
+		prevButton: '.imgshowPrev',
+		spaceBetween: 30
+	});
+</script>
+
+</body>
+</html>

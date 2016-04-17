@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=2,user-scalable=no">
+<title>找回密码-验证手机</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript"> 
+    var countdown=60; 
+    function settime(val) { 
+    if (countdown == 0) { 
+    val.removeAttribute("disabled");    
+    val.value="发送验证码"; 
+    countdown = 60; 
+    return false;
+
+    } else { 
+    val.setAttribute("disabled", true); 
+    val.value="重新发送(" + countdown + ")"; 
+    countdown--; 
+    } 
+    setTimeout(function() { 
+    settime(val) 
+    },1000) 
+    } 
+</script>
+
+</head>
+
+<body  onLoad="createCode();">
+	<div class="wrap_lo">
+         <div class="hea_lo">
+            <div class="login_auto clearfix">
+                <h1><img src="images/login_1.png" alt=""></h1>
+                <a href="index.html"><img src="images/login_2.png" alt="">返回官网</a>
+             </div><!-- login_auto end -->
+         </div><!-- hea_lo end -->
+         <div class="lo_con">
+            <form action="./Modify_password.html" method="get" class="lo_form1" id="lo_form1">
+                <p class="login_p1 ver_zhao">找回密码</p>
+                <p class="ver_p1"><img src="images/login_9.png" alt=""></p>
+                <ul class="ver_ul clearfix">
+                    <li>验证手机</li>
+                    <li>修改密码</li>
+                    <li>完成</li>
+                </ul>
+                <p style="position: relative;" class="ver_p2">
+                    <label for="">手机号码:</label>
+                    <input type="text" id="mobile" />
+                </p>
+                <p class="ver_p3 clearfix">
+                    <label for="">验证码:</label>
+                    <input type="text" class="fl" />
+                    <input type="button" class="fl huo_qu" value="获取短信校检码" onclick="settime(this)" id="btn">
+                </p>
+                <p class="ver_p4">
+                    <input type="submit" value="提交" class="ver_p4_in">
+                </p>
+             </form>
+         </div><!-- lo_con end -->
+         <div class="login_fot"  style="margin-top:230px;">
+             © 2014 海通恒信国际租赁有限公司 版权所有   沪ICP备11017593号
+         </div><!-- login_fot end -->
+    </div><!-- wrap_lo end -->
+    <script src="http://kefu.qycn.com/vclient/state.php?webid=113226" language="javascript" type="text/javascript"></script>
+</body>
+</html>

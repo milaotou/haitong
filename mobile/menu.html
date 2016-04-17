@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;">
+	<meta name="format-detection" content="telephone=no;email=no;">
+	<meta name="apple-mobile-web-app-capable" content="yes"><!-- home screen app 全屏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- 状态栏 -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>海通恒信国际租赁有限公司</title>
+</head>
+
+<body>
+<!--登陆页-->
+<div class="outbox">
+
+</div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+	var oLi = $('#menu li');
+	var arr = [];
+
+	oLi.each(function(i,item){
+		if($(item).find('ul').length>0){
+			$(item).find('h2').append('<i></i>');
+		}
+	});
+
+	$("#menu h2").click(function(){
+
+		$(this).next("ul").slideToggle("slow").parent('li').toggleClass('open')
+			.siblings().removeClass('open').find('ul').slideUp("slow");
+	});
+
+</script>
+</body>
+</html>
